@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cat Lovers - Sign Up!</title>
+</head>
+<body>
+    <div class="flex-col left">
+        <div class="header">
+            <h2>オーディン の</h2> 
+            <h2>プロジェクト</h2>
+        </div>
+        <div class="photo-credit">
+            写真は <a href="https://unsplash.com/@jaehunpark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jae Park</a> が <a href="https://unsplash.com/s/photos/cats?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>で作りました
+        </div>
+    </div>
+    <div class="flex-col right">
+        <div>
+            <p>
+                このサービスは現実じゃないですよ！夢が現実になるためにこういう何かが必要ですね？
+                <em>今</em>、入って始めますよ！
+            </p>
+            <p>きっと、入りたいでしょうか？</p>
+        </div>
+        <div class="form-background">
+            <h2>行くぜ！</h2>
+            <form action="" method="post" class="signup-form">
+                <div class="form-item">
+                    <label for="forename">名前：</label>
+                    <input type="text" name="forename" id="forename" placeholder="名前" autocomplete="first-name" required>
+                </div>
+                <div class="form-item">
+                    <label for="surname">名字：</label>
+                    <input type="text" name="surname" id="surname" placeholder="名字" autocomplete="family-name" required>
+                </div>
+                <div class="form-item">
+                    <label for="email">メールアドレス：</label>
+                    <input type="email" name="email" id="email" placeholder="noriko@cd.jp" autocomplete="email" required>
+                </div>
+                <div class="form-item">
+                    <label for="tel">電話番号：</label>
+                    <input type="tel" name="tel" id="tel" placeholder="000-0000-0000" pattern="(^\d{3}[ -]\d{4}[ -]\d{4}[ -]$)" autocomplete="tel" required>
+                </div>
+                <div class="form-item">
+                    <label for="password">パスワード</label>
+                    <input type="password" name="password" id="password" placeholder="" required>
+                </div>
+                <div class="form-item">
+                    <label for="password-confirm">同じなパスワード！</label>
+                    <input type="password" name="password-confirm" id="password-confirm" placeholder="" required>
+                </div>
+            </form>
+        </div>
+        <div>
+            <!-- How to link this to form? Fiddle with layout so it looks below form background?
+                 Or use button type button and javascript to link button to form? -->
+            <button type="submit">アカウントを作る</button>
+        </div>
+    </div>
+</body>
+</html>

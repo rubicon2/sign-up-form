@@ -1,0 +1,120 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col.left {
+    width: 40%;
+    height: auto;
+
+    background-color: green;
+    background-image: url("img/jae-park-cat.jpg");
+    background-size: cover;
+
+    color: white;
+    text-align: center;
+    padding-top: 20%;
+    justify-content: space-between;
+}
+
+.flex-col.left>.header {
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.143);
+}
+
+.flex-col.right {
+    width: 60%;
+    height: auto;
+
+    justify-content: center;
+    gap: 40px 0;
+
+    background-color: white;
+}
+
+.flex-col.right>* {
+    padding: 0 50px;
+}
+
+.flex-col.right p {
+    font-size: 24px;
+}
+
+.right .form-background {
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px grey;
+} 
+
+.signup-form {
+    padding-bottom: 20px;
+
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px 60px;
+}
+
+.signup-form>.form-item {
+    margin: 0;
+    padding: 0;
+}
+
+.signup-form>.form-item>* {
+    display: block;
+}
+
+button {
+    border: 0px;
+    border-radius: 15px;
+
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.383);
+}
+
+.signup-form input {
+    font-size: 18px;
+
+    padding: 5px;
+
+    border: 1px solid rgba(128, 128, 128, 0.291);
+    border-radius: 5px;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    box-shadow: 2px 2px 4px 4px rgba(128, 128, 128, 0.291);
+}
+
+input:placeholder-shown {
+    border: 1px solid rgba(128, 128, 128, 0.291);
+}
+
+button {
+    background-color: rgb(76, 152, 95);
+
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+
+    padding: 20px 40px;
+}
