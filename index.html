@@ -39,19 +39,22 @@
                 <div class="form-item">
                     <label for="email">メールアドレス：</label>
                     <input type="email" name="email" id="email" placeholder="noriko@cd.jp" autocomplete="email" required>
+                    <div class="form-warning">* Please enter a valid email address</div>
                 </div>
                 <div class="form-item">
                     <label for="tel">電話番号：</label>
-                    <input type="tel" name="tel" id="tel" placeholder="000-0000-0000" pattern="(^\d{3}[ -]\d{4}[ -]\d{4}[ -]$)" autocomplete="tel" required>
+                    <input type="tel" name="tel" id="tel" placeholder="000-0000-0000" pattern="(^\d{3}[ -]\d{4}[ -]\d{4}$)" autocomplete="tel" required>
+                    <div class="form-warning">* Please enter a valid phone number</div>
                 </div>
                 <div class="form-item">
                     <label for="password">パスワード</label>
                     <input type="password" name="password" id="password" placeholder="" required>
+                    <div class="form-warning">* Passwords do not match</div>
                 </div>
                 <div class="form-item">
                     <label for="password-confirm">同じなパスワード！</label>
                     <input type="password" name="password-confirm" id="password-confirm" placeholder="" required>
-                </div>
+                </div>    
             </form>
         </div>
         <div>
@@ -59,6 +62,7 @@
                  Or use button type button and javascript to link button to form? -->
             <button type="submit">アカウントを作る</button>
         </div>
+        <a href="">もう、アカウントを作りましたでしょうか？</a>
     </div>
 </body>
 </html>

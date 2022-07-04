@@ -37,7 +37,17 @@ body {
 
 .flex-col.left>.header {
     font-size: 36px;
-    background-color: rgba(0, 0, 0, 0.143);
+    background-color: rgba(0, 0, 0, 0.392);
+}
+
+.flex-col.left>.photo-credit {
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.flex-col.left>.photo-credit, 
+.flex-col a {
+    color: black;
 }
 
 .flex-col.right {
@@ -97,16 +107,24 @@ button {
     border-radius: 5px;
 }
 
-input:invalid {
-    border: 1px solid red;
+.form-warning {
+    margin-top: 5px;
+    color: red;
 }
 
-input:focus {
-    box-shadow: 2px 2px 4px 4px rgba(128, 128, 128, 0.291);
+input:invalid {
+    border: 1px solid red;
+    outline: 3px solid rgba(255, 0, 0, 0.298);
 }
 
 input:placeholder-shown {
     border: 1px solid rgba(128, 128, 128, 0.291);
+    outline: none;
+}
+
+input:focus {
+    outline: 1px solid blue;
+    box-shadow: 2px 2px 4px 4px rgba(128, 128, 128, 0.291);
 }
 
 button {
@@ -117,4 +135,12 @@ button {
     font-size: 18px;
 
     padding: 20px 40px;
+}
+
+button:hover {
+    background-color: rgb(83, 168, 91); 
+}
+
+button:active {
+    background-color: rgb(57, 117, 97);
 }
