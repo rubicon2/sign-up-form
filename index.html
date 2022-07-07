@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Cat Lovers - Sign Up!</title>
 </head>
 <body>
@@ -25,43 +26,45 @@
             </p>
             <p>きっと、入りたいでしょうか？</p>
         </div>
-        <div class="form-background">
-            <h2>行くぜ！</h2>
-            <form action="" method="post" class="signup-form">
-                <div class="form-item">
-                    <label for="forename">名前：</label>
-                    <input type="text" name="forename" id="forename" placeholder="名前" autocomplete="first-name" required>
+        <form action="http://httpbin.org/post" method="post" class="signup-form">
+            <div class="form-background">
+                <h2>行くぜ！</h2>
+                <div class="form-content">   
+                    <div class="form-item">
+                        <label for="forename">名前：</label>
+                        <input type="text" name="forename" id="forename" placeholder="名前" autocomplete="first-name" required>
+                        <small class="form-warning invisible">DUMMY</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="surname">名字：</label>
+                        <input type="text" name="surname" id="surname" placeholder="名字" autocomplete="family-name" required>
+                        <small class="form-warning invisible">DUMMY</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="email">メールアドレス：</label>
+                        <input type="email" name="email" id="email" placeholder="noriko@cd.jp" autocomplete="email" required>
+                        <small class="form-warning invisible">* メールを入れてください</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="tel">電話番号：</label>
+                        <input type="tel" name="tel" id="tel" placeholder="000-0000-0000" pattern="(^\d{3}[ -]\d{4}[ -]\d{4}$)" autocomplete="tel" required>
+                        <small class="form-warning invisible">* 電話番号を入れてください</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="password">パスワード</label>
+                        <input type="password" name="password" id="password" placeholder="" required>
+                        <small class="form-warning invisible">* パスワードが二つとも違います</small>
+                    </div>
+                    <div class="form-item">
+                        <label for="password-confirm">同じなパスワード！</label>
+                        <input type="password" name="password-confirm" id="password-confirm" placeholder="" required>
+                    </div>
                 </div>
-                <div class="form-item">
-                    <label for="surname">名字：</label>
-                    <input type="text" name="surname" id="surname" placeholder="名字" autocomplete="family-name" required>
-                </div>
-                <div class="form-item">
-                    <label for="email">メールアドレス：</label>
-                    <input type="email" name="email" id="email" placeholder="noriko@cd.jp" autocomplete="email" required>
-                    <div class="form-warning">* Please enter a valid email address</div>
-                </div>
-                <div class="form-item">
-                    <label for="tel">電話番号：</label>
-                    <input type="tel" name="tel" id="tel" placeholder="000-0000-0000" pattern="(^\d{3}[ -]\d{4}[ -]\d{4}$)" autocomplete="tel" required>
-                    <div class="form-warning">* Please enter a valid phone number</div>
-                </div>
-                <div class="form-item">
-                    <label for="password">パスワード</label>
-                    <input type="password" name="password" id="password" placeholder="" required>
-                    <div class="form-warning">* Passwords do not match</div>
-                </div>
-                <div class="form-item">
-                    <label for="password-confirm">同じなパスワード！</label>
-                    <input type="password" name="password-confirm" id="password-confirm" placeholder="" required>
-                </div>    
-            </form>
-        </div>
-        <div>
-            <!-- How to link this to form? Fiddle with layout so it looks below form background?
-                 Or use button type button and javascript to link button to form? -->
-            <button type="submit">アカウントを作る</button>
-        </div>
+            </div>
+            <div>
+                <button type="button" id="submit">アカウントを作る</button>
+            </div>
+        </form>
         <a href="">もう、アカウントを作りましたでしょうか？</a>
     </div>
 </body>

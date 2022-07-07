@@ -54,13 +54,14 @@ body {
     width: 60%;
     height: auto;
 
-    justify-content: center;
+    justify-content: flex-start;
     gap: 40px 0;
 
     background-color: white;
 }
 
-.flex-col.right>* {
+.flex-col.right p,
+.flex-col.right a {
     padding: 0 50px;
 }
 
@@ -68,34 +69,31 @@ body {
     font-size: 24px;
 }
 
-.right .form-background {
+.form-background {
     background-color: white;
-    box-shadow: 0px 0px 20px 0px grey;
+    box-shadow: 0px 5px 15px 0px rgba(128, 128, 128, 0.725);
+
+    padding: 20px 0;
 } 
 
-.signup-form {
-    padding-bottom: 20px;
-
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap: 20px 60px;
+.form-background>* {
+    padding: 0 60px;
 }
 
-.signup-form>.form-item {
+.form-content {
+    display: flex; 
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 6px 60px; 
+}
+
+.form-item {
     margin: 0;
     padding: 0;
 }
 
-.signup-form>.form-item>* {
+.form-item>* {
     display: block;
-}
-
-button {
-    border: 0px;
-    border-radius: 15px;
-
-    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.383);
 }
 
 .signup-form input {
@@ -103,22 +101,28 @@ button {
 
     padding: 5px;
 
-    border: 1px solid rgba(128, 128, 128, 0.291);
+    border: 1px solid #E5E7EB;
     border-radius: 5px;
 }
 
+/* input:valid {
+    background: white url("img/jae-park-cat.jpg") right no-repeat;
+    background-size: 35px 35px;
+} */
+
 .form-warning {
-    margin-top: 5px;
+    margin-top: 3px;
     color: red;
 }
 
-input:invalid {
+input:invalid, 
+input.error {
     border: 1px solid red;
     outline: 3px solid rgba(255, 0, 0, 0.298);
 }
 
 input:placeholder-shown {
-    border: 1px solid rgba(128, 128, 128, 0.291);
+    border: 1px solid #E5E7EB;
     outline: none;
 }
 
@@ -128,12 +132,19 @@ input:focus {
 }
 
 button {
+    border: 0px;
+    border-radius: 15px;
+
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.383);
+
     background-color: rgb(76, 152, 95);
 
     color: white;
     font-weight: bold;
     font-size: 18px;
 
+    margin-top: 25px;
+    margin-left: 50px;
     padding: 20px 40px;
 }
 
@@ -143,4 +154,8 @@ button:hover {
 
 button:active {
     background-color: rgb(57, 117, 97);
+}
+
+.invisible {
+    opacity: 0;
 }
